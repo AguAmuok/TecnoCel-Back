@@ -30,7 +30,7 @@ const sendVerification = async (email, string) => {
       rejectUnauthorized: false
     }
   })
-
+  
   let mailOptions = {
     from: 'tecnocelcba.oficial@gmail.com',
     to: email,

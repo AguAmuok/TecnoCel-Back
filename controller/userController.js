@@ -153,7 +153,6 @@ const userController = {
             }
          }
 
-
       }
       catch (err) { res.json({ success: false, message: 'ALGO SALIO MAL, PORFAVOR INTENTALO EN UNOS MINUTOS' }) }
    },
@@ -165,12 +164,13 @@ const userController = {
       if (user) {
          user.verification = true
          await user.save()
-         res.redirect(`http://localhost:3000/`)
+         res.redirect(`https://tecnocelweb.herokuapp.com/`)
       }
       else {
          res.json({ success: false, message: 'EL EMAIL NO HA SIDO VERIFICADO!' })
       }
    },
+   
    signOutUser: async (req, res) => {
       console.log('signOut')
       console.log(req.body)
